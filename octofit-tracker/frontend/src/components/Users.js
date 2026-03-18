@@ -1,15 +1,5 @@
 import { useEffect, useState } from "react";
 
-function getApiBaseUrl() {
-  const codespaceName = process.env.REACT_APP_CODESPACE_NAME;
-
-  if (codespaceName) {
-    return `https://${codespaceName}-8000.app.github.dev/api`;
-  }
-
-  return "http://localhost:8000/api";
-}
-
 function normalizeListResponse(payload) {
   if (Array.isArray(payload)) {
     return payload;
@@ -27,9 +17,11 @@ export default function Users() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [query, setQuery] = useState("");
+  const endpoint = process.env.REACT_APP_CODESPACE_NAME
+    ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`
+    : "http://localhost:8000/api/users/";
 
   async function fetchUsers() {
-    const endpoint = `${getApiBaseUrl()}/users/`;
     console.log("[Users] API endpoint:", endpoint);
 
     try {
@@ -66,7 +58,7 @@ export default function Users() {
     <section className="card shadow-sm border-0 mb-4">
       <div className="card-header bg-white border-0 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
         <h2 className="h4 mb-0 text-primary">Users</h2>
-        <a className="link-primary fw-semibold" href="/users">
+        <a className="link-primary fw-semibold" href={endpoint}>
           Endpoint: /api/users/
         </a>
       </div>
