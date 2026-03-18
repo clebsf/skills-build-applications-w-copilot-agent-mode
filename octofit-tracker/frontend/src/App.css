@@ -1,0 +1,159 @@
+:root {
+  --octo-ink: #133049;
+  --octo-sky: #f3fbff;
+  --octo-surface: #ffffff;
+  --octo-primary: #0c6d9b;
+  --octo-primary-dark: #07597f;
+  --octo-accent: #12a57d;
+  --octo-link: #0d7eb4;
+  --octo-link-hover: #095a82;
+}
+
+.app-shell {
+  background:
+    radial-gradient(circle at 12% 8%, #def6ff 0%, rgba(222, 246, 255, 0) 35%),
+    radial-gradient(circle at 88% 18%, #d8f7ef 0%, rgba(216, 247, 239, 0) 30%),
+    linear-gradient(180deg, #eef8ff 0%, #f7fbff 48%, #f2faf7 100%);
+  color: var(--octo-ink);
+}
+
+.app-shell main {
+  color: var(--octo-ink);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0f3f63;
+}
+
+.text-secondary {
+  color: #365f7a !important;
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: var(--octo-surface);
+  border: 1px solid #d8e8f3;
+}
+
+.navbar.bg-primary {
+  background: linear-gradient(90deg, #0b5376 0%, #0c6d9b 55%, #0a8b8c 100%) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #f4fbff !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #ccf1ff !important;
+}
+
+.octofit-logo {
+  object-fit: cover;
+  border-radius: 0.6rem;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+a,
+.link-primary {
+  color: var(--octo-link) !important;
+}
+
+a:hover,
+a:focus,
+.link-primary:hover,
+.link-primary:focus {
+  color: var(--octo-link-hover) !important;
+}
+
+.table {
+  --bs-table-color: #143e5f;
+  --bs-table-striped-bg: #eff8fd;
+  --bs-table-hover-bg: #ddf2fb;
+  --bs-table-border-color: #c8dfea;
+}
+
+.table thead.table-light th {
+  background: linear-gradient(180deg, #d5ecfa 0%, #e7f5ff 100%);
+  color: #0d4f73;
+  border-bottom-color: #bdd8e7;
+}
+
+.table th,
+.table td {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--octo-primary) 0%, var(--octo-primary-dark) 100%);
+  border-color: var(--octo-primary-dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(180deg, #0a80b8 0%, #08648d 100%);
+  border-color: #07597f;
+}
+
+.btn-outline-primary {
+  color: var(--octo-primary-dark);
+  border-color: #0e79ad;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #0e79ad;
+  border-color: #0e79ad;
+}
+
+.btn-outline-secondary {
+  color: #35586f;
+  border-color: #93b4c8;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  color: #fff;
+  background-color: #496f87;
+  border-color: #496f87;
+}
+
+.btn-outline-success {
+  color: #0b7f61;
+  border-color: #11a57c;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+  color: #fff;
+  background-color: #0f9470;
+  border-color: #0f9470;
+}
+
+.btn-outline-info {
+  color: #0a7089;
+  border-color: #14a8c9;
+}
+
+.btn-outline-info:hover,
+.btn-outline-info:focus {
+  color: #fff;
+  background-color: #108dac;
+  border-color: #108dac;
+}
+
+.modal-backdrop {
+  z-index: 1040;
+}
+
+.modal {
+  z-index: 1050;
+}
